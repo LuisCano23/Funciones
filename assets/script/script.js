@@ -55,6 +55,15 @@ function cambiarColor(cuadro, colorear){
     cuadro.style.backgroundColor=colorear
 }
 
+function agregarDiv(coloreado){
+    cuerpo=document.querySelector("body")
+    crear=document.createElement("div")
+    crear.style.width='200px'
+    crear.style.height='200px'
+    crear.style.backgroundColor=coloreado
+    cuerpo.appendChild(crear)
+}
+
 document.addEventListener('keydown', function(event){
     if(event.key==='a'){
         cambiarColor(cambiante,'pink')
@@ -64,6 +73,18 @@ document.addEventListener('keydown', function(event){
         }else{
             if(event.key==='d'){
                 cambiarColor(cambiante,'skyblue')
+            }else{
+                if(event.key==='q'){
+                    agregarDiv('purple')
+                }else{
+                    if(event.key==='w'){
+                        agregarDiv('grey')
+                    }else{
+                        if(event.key==='e'){
+                            agregarDiv('brown')
+                        }
+                    }
+                }
             }
         }
     }
